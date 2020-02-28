@@ -5,30 +5,29 @@ Installation
 Requirements
 ^^^^^^^^^^^^
 
-xgcm is compatible with python 3 and python 2.7. It requires xarray_
-(>= version 0.8.2) and dask_ (>= version 0.11.2).
-These packages are most reliably installed via the
-`conda <http://conda.pydata.org/docs/>`_ environment management
-system, which is part of the Anaconda_ python distribution. Assuming you have
-conda available on your system, the dependencies can be installed with the
-command::
+xgcm is compatible with python 3 (>= version 3.6). It requires xarray_
+(>= version 0.13.0) numpy_ (>= version 1.16.0) and dask_ (>= version 0.16.0).
 
-    conda install xarray dask
+Installation from Conda Forge
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are using earlier versions of these packages, you should update before
-installing xgcm.
+The easiest way to install xgcm along with its dependencies is via conda
+forge::
 
-Installation via pip
-^^^^^^^^^^^^^^^^^^^^
+    conda install -c conda-forge xgcm
 
-If you just want to use xgcm, the easiest way is to install via pip::
+
+Installation from Pip
+^^^^^^^^^^^^^^^^^^^^^
+
+An alternative is to use pip::
 
     pip install xgcm
 
-This will automatically install the latest release from
+This will install the latest release from
 `pypi <https://pypi.python.org/pypi>`_.
 
-Installation from github
+Installation from GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 xgcm is under active development. To obtain the latest development version,
@@ -47,12 +46,7 @@ Users are encouraged to `fork <https://help.github.com/articles/fork-a-repo/>`_
 xgcm and submit issues_ and `pull requests`_.
 
 .. _dask: http://dask.pydata.org
+.. _numpy: https://numpy.org
 .. _xarray: http://xarray.pydata.org
-.. _Comodo: http://pycomodo.forge.imag.fr/norm.html
 .. _issues: https://github.com/xgcm/xgcm/issues
 .. _`pull requests`: https://github.com/xgcm/xgcm/pulls
-.. _MITgcm: http://mitgcm.org/public/r2_manual/latest/online_documents/node277.html
-.. _out-of-core: https://en.wikipedia.org/wiki/Out-of-core_algorithm
-.. _Anaconda: https://www.continuum.io/downloads
-.. _`CF conventions`: http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch04s04.html
-.. _gcmfaces: http://mitgcm.org/viewvc/*checkout*/MITgcm/MITgcm_contrib/gael/matlab_class/gcmfaces.pdf

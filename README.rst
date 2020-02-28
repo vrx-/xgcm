@@ -1,9 +1,22 @@
 xgcm: General Circulation Model Postprocessing with xarray
 ==========================================================
 
-|pypi| |Build Status| |codecov| |docs| |DOI| |license|
+|pypi| |conda forge| |Build Status| |codecov| |docs| |DOI| |license| |Code style|
 
-**xgcm** is a python packge for working with the datasets produced by numerical
+Binder Examples
+---------------
+
+========= ============== ============================================================================
+Link      Provider       Description
+========= ============== ============================================================================
+|Binder|  mybinder.org   Basic self-contained example
+|PBinder| Pangeo Binder  More complex examples integrated with other Pangeo tools (dask, zarr, etc.)
+========= ============== ============================================================================
+
+Description
+-----------
+
+**xgcm** is a python package for working with the datasets produced by numerical
 `General Circulation Models <https://en.wikipedia.org/wiki/General_circulation_model>`_
 (GCMs) and similar gridded datasets that are amenable to
 `finite volume <https://en.wikipedia.org/wiki/Finite_volume_method>`_ analysis.
@@ -28,11 +41,17 @@ evolving, open-source, python-based framework for GCM analysis will enhance
 the productivity of the field as a whole, accelerating the rate of discovery in
 climate science. xgcm is part of the Pangeo_ initiative.
 
+For more information, including installation instructions, read the full
+`xgcm documentation`_.
+
 .. _Pangeo: http://pangeo-data.github.io
 .. _dask: http://dask.pydata.org
 .. _xarray: http://xarray.pydata.org
 .. _Arakawa Grids: https://en.wikipedia.org/wiki/Arakawa_grid
+.. _xgcm documentation: https://xgcm.readthedocs.io/
 
+.. |conda forge| image:: https://anaconda.org/conda-forge/xgcm/badges/version.svg
+   :target: https://anaconda.org/conda-forge/xgcm
 .. |DOI| image:: https://zenodo.org/badge/41581350.svg
    :target: https://zenodo.org/badge/latestdoi/41581350
 .. |Build Status| image:: https://travis-ci.org/xgcm/xgcm.svg?branch=master
@@ -50,3 +69,10 @@ climate science. xgcm is part of the Pangeo_ initiative.
 .. |license| image:: https://img.shields.io/github/license/mashape/apistatus.svg
    :target: https://github.com/xgcm/xgcm
    :alt: license
+.. |Code style| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/python/black
+   :alt: Code style
+.. |Binder| image:: https://mybinder.org/badge_logo.svg
+   :target: https://mybinder.org/v2/gh/xgcm/xgcm/master?filepath=doc%2Fexample_mitgcm.ipynb
+.. |PBinder| image:: https://binder.pangeo.io/badge_logo.svg
+   :target: https://binder.pangeo.io/v2/gh/pangeo-data/pangeo-ocean-examples/master

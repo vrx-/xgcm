@@ -13,7 +13,7 @@ Grid Topology
 Faces and Connections
 ~~~~~~~~~~~~~~~~~~~~~
 
-Simple grids, as described on the :ref:`grid_topology` page, consist of a
+Simple grids, as described on the :ref:`grids` page, consist of a
 single logically rectangular domain.
 Many modern GCMs use more complex grid topologies, consisting of multiple
 logically rectangular grids connected at their edges.
@@ -24,7 +24,10 @@ xgcm is capable of understanding the connections between these grid
   :scale: 20 %
   :alt: Cubed Sphre Grid
 
-  Example of a cubed-sphere grid from the MIT General Circulation Model.
+  Example of a lat-lon-cap grid from the MIT General Circulation Model.
+  Image credit `Gael Forget <http://www.gaelforget.net/>`_.
+  More information about the simulation and grid available at
+  https://doi.org/10.5194/gmd-8-3071-2015.
 
 In order to construct such a complex grid topology, we need a way to tell
 xgcm about the connections between faces. This is accomplished via the
@@ -99,7 +102,7 @@ Two Faces with Rotated Axes
 Cubed Sphere
 ^^^^^^^^^^^^
 
-A more realistic and complicated example is a cobed sphere. One possible
+A more realistic and complicated example is a cubed sphere. One possible
 topology for a cubed sphere grid is shown in the figure below:
 
 .. figure:: images/cubed_sphere_face_connections.png
@@ -120,7 +123,7 @@ spatial dimensions and a face dimension as follows:
                              'face': (('face',), np.arange(6))})
    ds
 
-We specify the face connections an create the ``Grid`` object as follows:
+We specify the face connections and create the ``Grid`` object as follows:
 
 .. ipython:: python
 
@@ -139,6 +142,11 @@ We specify the face connections an create the ``Grid`` object as follows:
                             'Y': ((0, 'Y', False), (2, 'Y', True))}}}
    grid = xgcm.Grid(ds, face_connections=face_connections)
    grid
+
+For a real-world example of how to use face connections, check out the
+`MITgcm ECCOv4 example`_.
+
+.. _MITgcm ECCOv4 example: example_eccov4.ipynb
 
 .. _face_connections_spec:
 
